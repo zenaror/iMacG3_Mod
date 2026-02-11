@@ -27,8 +27,8 @@ Nos dias de hoje, principalmente o mouse, é bem complicado usar, ja que ele tem
 Infelizmente isso não existe nos demais sistemas operacionais, porém é totalmente contornavel usando o Auto-Hotkey.
 No meu caso, como estou usando o Linux Mint como sistema operacional, a única forma de fazer funcionar para mim foi usar o [AHK X11](https://github.com/phil294/AHK_X11). Ele funciona diferente de como funciona no Windows, mas com um pouco de costume e alterações, consegui fazer um script que consegue:
 * **Shift + Backspace** (a tecla delete funciona como backspace) > Realiza a função da tecla DELETE de um teclado convencional.
-* **F6** > Atua como o botão do meio do mouse, imitando um clique fisico e permitindo a ação de segurar
-* **F7** > Atua como o botão direito do mouse, imitando um clique fisico e permitindo a ação de segurar
+* **F6** > Atua como o botão direito do mouse, imitando um clique fisico e permitindo a ação de segurar
+* **F7** > Atua como o botão do meio do mouse, imitando um clique fisico e permitindo a ação de segurar
 * **Alt/Option + Clique** > Clique com o botão direito (literalmente só o clique)
 * **Ctrl/Control + Alt/Option + Clique** > Clique com o botão do meio do mouse (literalmente só o clique)
 
