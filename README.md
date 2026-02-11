@@ -21,6 +21,7 @@ O objetivo aqui é juntar o útil ao agradável. Esse é meu plano:
 * Caixas de som original
 * Painel frontal original
 * Teclado e mouse orignais (BONUS, pois dei sorte de achar na internet)
+* Microfone de mesa da Clone (sim a marca clone, não clone de pirata). Esse carinha vai no topo do monitor.
 
 ## Usando o Teclado e Mouse
 Nos dias de hoje, principalmente o mouse, é bem complicado usar, ja que ele tem apenas um botão. No Mac, isso era contornado usando teclas modificadoras, como o Control para modificar o tipo do clique.
