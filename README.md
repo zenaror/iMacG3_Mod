@@ -2,6 +2,8 @@
 
 Essa modificação consiste em transformar uma carcaça de um iMac G3 Tray Loading, que não vejo muitas com esse modelo, em um novo All-in-One. Porém também quero incluir a possibilidade de usá-lo como monitor externo, para meu trabalho por exemplo.
 
+---
+
 ## Sobre
 Minha maior motivação para esse projeto é a estética. Sempre gostei desse visual tecnologico [Y2K](https://pt.wikipedia.org/wiki/Est%C3%A9tica_Y2K). Porém sei das limitações que os computadores daquele tempo tem para hoje em dia. Mas isso não muda o fato de eu gostar da estética.
 
@@ -37,3 +39,10 @@ Porém a acentuação não estava certa, então basicamente corrigi isso. També
 Todos esses scripts auxiliares, você encontra [aqui](https://github.com/zenaror/iMacG3_Mod/tree/main/Sistema%20Operacional/Linux%20Mint)
 
 ## Preparação da tela
+
+---
+
+# Inspirações
+Esse projeto foi inspirado por vários outros, principalmente esses:
+* https://github.com/crozone/iMac-G3-PC-Conversion
+* https://github.com/Diepzeevogel/iMac-G3-replacement-parts
