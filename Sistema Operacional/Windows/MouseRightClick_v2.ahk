@@ -1,3 +1,5 @@
+#Requires AutoHotkey v2.0
+
 control := 0
 
 RWin::Send "{LCtrl down}{RAlt down}"
@@ -34,4 +36,17 @@ RWin Up::Send "{LCtrl up}{RAlt up}"
         Sleep 10
     }
     Click "Middle Up"
+}
+
+SC15E::
+{
+    ; Tenta focar no Desktop de forma genérica
+    if WinExist("ahk_class Progman")
+        WinActivate("ahk_class Progman")
+    else if WinExist("ahk_class WorkerW")
+        WinActivate("ahk_class WorkerW")
+    
+    ; Pequena pausa para garantir o foco antes de enviar o comando
+    Sleep(50)
+    Send("!{F4}")
 }
