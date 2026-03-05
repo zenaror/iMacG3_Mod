@@ -2,27 +2,28 @@
 
 control := 0
 
-RWin::Send "{LCtrl down}{RAlt down}"
-RWin Up::Send "{LCtrl up}{RAlt up}"
+~RWin::Send "{LCtrl down}{RAlt down}"
+~RWin Up::Send "{LCtrl up}{RAlt up}"
 
-+Backspace:: {
+RWin & Backspace:: {
+    Send "{LCtrl up}{RAlt up}"
     Send "{Delete}"
 }
 
-^!LButton Up:: {
-    Send "{RAlt up}{LCtrl up}"
+RWin & LButton Up:: {
+    Send "{LCtrl up}{RAlt up}"
     Send "{RButton}"
 }
 
-+PgDn:: {
+RWin & PgDn:: {
     Send "{WheelDown}"
 }
 
-+PgUp:: {
+RWin & PgUp:: {
     Send "{WheelUp}"
 }
 
-*F6:: {
+RWin & F6:: {
     Click "Right Down"
     while GetKeyState("F6", "P") {
         Sleep 10
@@ -30,7 +31,7 @@ RWin Up::Send "{LCtrl up}{RAlt up}"
     Click "Right Up"
 }
 
-*F7:: {
+RWin & F7:: {
     Click "Middle Down"
     while GetKeyState("F7", "P") {
         Sleep 10
