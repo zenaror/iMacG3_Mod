@@ -51,3 +51,5 @@ SC15E::
     Sleep(50)
     Send("!{F4}")
 }
+
+NumpadClear::Send("=")
