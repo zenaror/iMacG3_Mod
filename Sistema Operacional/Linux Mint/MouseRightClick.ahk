@@ -1,7 +1,8 @@
+#XGrabRoot
 control = 0
 
 ; --- Backspace vira Delete com Mode_switch ---
-$Backspace::
+$Backspace Down::
 GetKeyState, status, Mode_switch, P
 if status = D
     Send, {Delete}
@@ -74,25 +75,3 @@ else
     Send, {F7}
 }
 return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
