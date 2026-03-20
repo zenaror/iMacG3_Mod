@@ -1,52 +1,78 @@
 control = 0
 
-+Backspace::
-Send {Delete}
+; --- Backspace vira Delete com Mode_switch ---
+$Backspace::
+GetKeyState, status, Mode_switch, P
+if status = D
+    Send, {Delete}
+else
+    Send, {Backspace} 
 return
 
-^!LButton Up::
-Send, {LALT up} {LControl up}
-Send, {MButton}
+; --- Cliques de Mouse com Mode_switch ---
+~LButton Up::
+GetKeyState, statusMode, Mode_switch, P
+
+if statusMode = D
+    Send, {RButton}
 return
 
-!LButton Up::
-Send, {LALT up}
-Send, {RButton}
+; --- PgDn/PgUp viram WheelDown/WheelUp com Mode_switch ---
+$PgDn::
+GetKeyState, status, Mode_switch, P
+if status = D
+    Send, {WheelDown}
+else
+    Send, {PgDn}
 return
 
-+PgDn::
-Send, {WheelDown}
+$PgUp::
+GetKeyState, status, Mode_switch, P
+if status = D
+    Send, {WheelUp}
+else
+    Send, {PgUp}
 return
 
-+PgUp::
-Send, {WheelUp}
-return
-
-
-*F6::
-MouseClick, right,,, 1, 0, D  ; Hold down the left mouse button.
-Loop
+; --- F6 e F7 usando Mode_switch para disparar o Loop ---
+$F6::
+GetKeyState, status, Mode_switch, P
+if status = D
 {
-	Sleep, 10
-	GetKeyState, state, F6, P
-	if state = U  ; The key has been released, so break out of the loop.
-		break
-	; ... insert here any other actions you want repeated.
+    MouseClick, right,,, 1, 0, D
+    Loop
+    {
+        Sleep, 10
+        GetKeyState, state, F6, P
+        if state = U
+            break
+    }
+    MouseClick, right,,, 1, 0, U
 }
-MouseClick, right,,, 1, 0, U  ; Release the mouse button.
+else
+{
+    Send, {F6}
+}
 return
 
-*F7::
-MouseClick, middle,,, 1, 0, D  ; Hold down the left mouse button.
-Loop
+$F7::
+GetKeyState, status, Mode_switch, P
+if status = D
 {
-	Sleep, 10
-	GetKeyState, state, F7, P
-	if state = U  ; The key has been released, so break out of the loop.
-		break
-	; ... insert here any other actions you want repeated.
+    MouseClick, middle,,, 1, 0, D
+    Loop
+    {
+        Sleep, 10
+        GetKeyState, state, F7, P
+        if state = U
+            break
+    }
+    MouseClick, middle,,, 1, 0, U
 }
-MouseClick, middle,,, 1, 0, U  ; Release the mouse button.
+else
+{
+    Send, {F7}
+}
 return
 
 
